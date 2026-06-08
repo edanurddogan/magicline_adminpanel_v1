@@ -3,7 +3,6 @@ import axios from "axios";
 import { useUserStore } from "src/stores/user";
 import { Notify } from "quasar";
 import { i18n } from "boot/i18n";
-import { apiBaseUrl } from "src/config/brand";
 //import { interceptorsMessage } from "../../apiServices/interceptors/axiosInterceptor";
 
 // Be careful when using SSR for cross-request state pollution
@@ -19,7 +18,7 @@ const api = axios.create({
   //baseURL: "http://api.infaura.com:8081/api/",
   //baseURL: "https://base-uat.energysarj.com.tr/api/",  // Can Enerji UAT
   //baseURL: "https://bo-uat-api.e4sarj.com.tr/api/", // E4 UAT
-  baseURL: apiBaseUrl,
+  baseURL: "https://api.magiclineapp.com/api/", // Magicline Prod
 });
 
 export default boot(({ app }) => {

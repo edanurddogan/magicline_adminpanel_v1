@@ -17,7 +17,7 @@ layout.closeLeftDrawer();
         <q-item class="bg-primary text-white center">
           <q-item-section>
             <q-img
-              :src="brandAssets.logo2"
+              :src="`src/assets/logo/${firm.code}/logo2.png`"
               spinner-color="white"
               fit="fill"
               position="center"
@@ -120,9 +120,9 @@ layout.closeLeftDrawer();
 </template>
 <script>
 import { defineComponent } from "vue";
+import { firm } from "../../package.json";
 import { LocalStorage } from "quasar";
 import LocaleSwitcher from "src/components/LocaleSwitcher.vue";
-import { brandAssets, firm } from "src/config/brand";
 import { useUserStore } from "src/stores/user";
 const user = useUserStore();
 
@@ -139,7 +139,6 @@ export default defineComponent({
   },
   data() {
     return {
-      brandAssets,
       email: user.savedLogin ? user.savedLogin.email : "",
       password: user.savedLogin ? user.savedLogin.password : "",
       remember: user.savedLogin ? user.savedLogin.remember : false,

@@ -23,7 +23,7 @@
         <!-- :src="`src/assets/logo/${firm.code}/logo.png`" -->
         <!-- src="~/assets/logo/logo.png" -->
         <q-img
-          :src="brandAssets.logo"
+          :src="`src/assets/logo/${firm.code}/logo.png`"
           spinner-color="white"
           fit="fill"
           position="left center"
@@ -1059,7 +1059,7 @@
           <!-- :src="`src/assets/logo/${firm.code}/logo2.png`" -->
           <!-- src="~/assets/logo/logo_yatay.png" -->
           <q-img
-            :src="brandAssets.logo2"
+            :src="`src/assets/logo/${firm.code}/logo2.png`"
             spinner-color="white"
             fit="contain"
           >
@@ -1121,7 +1121,7 @@
         >
           <!--src="~/assets/logo/magicline_logo.png"-->
           <q-img
-            :src="brandAssets.logo2"
+            :src="`/src/assets/logo/${firm.code}/logo2.png`"
             spinner-color="white"
             fit="scale-down"
             position="left center"
@@ -1152,13 +1152,10 @@ import {
   Loading,
   QSpinnerGears,
 } from "quasar";
-import {
-  author,
-  brandAssets,
-  firm,
-  productName,
-  version,
-} from "src/config/brand";
+import { version } from "../../package.json";
+import { productName } from "../../package.json";
+import { author } from "../../package.json";
+import { firm } from "../../package.json";
 import { useLayoutStore } from "../stores/layout";
 import { useUserStore } from "../stores/user";
 import { useMenuStore } from "src/stores/menu";
@@ -1203,7 +1200,6 @@ export default {
       link: "Dashboard",
       rightDrawerOpen: false,
       mobile: false,
-      brandAssets,
       selectedColor: "#FF00FFCC",
       user: {},
       auth: {},
