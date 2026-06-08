@@ -317,7 +317,7 @@ export default defineComponent({
   },
   async mounted() {
     this.init();
-    document.title = "Magicline - " + this.$t("pages.lostOrStolen");
+    this.$setPageTitle(this.$t("pages.lostOrStolen"));
 
     this.getList();
   },

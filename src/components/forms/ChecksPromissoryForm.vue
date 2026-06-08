@@ -312,7 +312,7 @@ export default defineComponent({
   mounted() {
     this.$logger.log("formModel: ", this.formModel);
     this.init();
-    document.title = "Magicline - Orders";
+    this.$setPageTitle("Orders");
 
     this.formModel.termDate = date.formatDate(
       this.formModel.termDate,

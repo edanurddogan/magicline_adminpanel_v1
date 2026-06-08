@@ -232,7 +232,7 @@ export default defineComponent({
   },
 
   async mounted() {
-    document.title = "Magicline - Yetkilendirme";
+    this.$setPageTitle("Yetkilendirme");
     const response = await this.$api
       .get("getAuthList")
       .then((response) => {

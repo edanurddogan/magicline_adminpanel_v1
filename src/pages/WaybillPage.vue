@@ -331,7 +331,7 @@ export default defineComponent({
   },
   async mounted() {
     this.init();
-    document.title = "Magicline - İrsaliyeler";
+    this.$setPageTitle("İrsaliyeler");
     this.getList();
   },
   methods: {

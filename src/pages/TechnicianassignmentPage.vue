@@ -351,7 +351,7 @@ export default defineComponent({
 
   methods: {
     init() {
-      document.title = "Magicline - Technician Assignment";
+      this.$setPageTitle("Technician Assignment");
       try {
         if (Platform.is.mobile) {
           this.layout.closeLeftDrawer();

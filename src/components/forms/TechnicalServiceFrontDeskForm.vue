@@ -1818,7 +1818,7 @@ export default defineComponent({
   mounted() {
     this.$logger.log("formModel: ", this.formModel);
     this.init();
-    document.title = `Magicline - ${this.$t("pages.technicalService")}`;
+    this.$setPageTitle(this.$t("pages.technicalService"));
   },
   methods: {
     async init() {

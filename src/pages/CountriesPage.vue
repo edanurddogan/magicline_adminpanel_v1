@@ -428,7 +428,7 @@ export default defineComponent({
   },
   methods: {
     init() {
-      document.title = "Magicline - Countries";
+      this.$setPageTitle("Countries");
       try {
         if (Platform.is.mobile) {
           this.layout.closeLeftDrawer();

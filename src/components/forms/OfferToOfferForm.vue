@@ -1195,7 +1195,7 @@ export default defineComponent({
     this.$logger.log("formMode: ", this.formMode);
     this.offerId = this.formModel.id;
     this.init();
-    document.title = "Magicline - Offers";
+    this.$setPageTitle("Offers");
   },
   methods: {
     dateChange(data) {

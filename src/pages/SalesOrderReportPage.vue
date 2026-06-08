@@ -631,7 +631,7 @@ export default defineComponent({
   },
   async mounted() {
     this.init();
-    document.title = `Magicline - ${this.$t("reports.SalesReport")}`;
+    this.$setPageTitle(this.$t("reports.SalesReport"));
   },
   methods: {
     init() {

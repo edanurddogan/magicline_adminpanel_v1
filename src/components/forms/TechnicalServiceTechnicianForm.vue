@@ -757,7 +757,7 @@ export default defineComponent({
 
     this.formMode = "edit";
     this.init();
-    document.title = `Magicline - ${this.$t("pages.technicalService")}`;
+    this.$setPageTitle(this.$t("pages.technicalService"));
     this.filteredBrands = this.brands;
     this.filteredModels = this.models;
     this.getMaterials();

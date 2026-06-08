@@ -9,7 +9,7 @@ layout.closeLeftDrawer();
   <q-page class="flex flex-center">
     <q-img
       class="bg"
-      :src="darkMode ? '/src/assets/loginbg4.jpg' : '/src/assets/loginbg1.jpg'"
+      :src="darkMode ? loginBackgrounds.dark : loginBackgrounds.light"
     ></q-img>
     <locale-switcher class="absolute absolute-top-right on-left" />
     <div class="column">
@@ -17,7 +17,7 @@ layout.closeLeftDrawer();
         <q-item class="bg-primary text-white center">
           <q-item-section>
             <q-img
-              :src="`src/assets/logo/${firm.code}/logo2.png`"
+              :src="brandAssets.logo2"
               spinner-color="white"
               fit="fill"
               position="center"
@@ -124,6 +124,7 @@ import { firm } from "../../package.json";
 import { LocalStorage } from "quasar";
 import LocaleSwitcher from "src/components/LocaleSwitcher.vue";
 import { useUserStore } from "src/stores/user";
+import { brandAssets, loginBackgrounds } from "src/utils/brand-assets";
 const user = useUserStore();
 
 export default defineComponent({
@@ -139,7 +140,9 @@ export default defineComponent({
   },
   data() {
     return {
+      brandAssets,
       email: user.savedLogin ? user.savedLogin.email : "",
+      loginBackgrounds,
       password: user.savedLogin ? user.savedLogin.password : "",
       remember: user.savedLogin ? user.savedLogin.remember : false,
       loading: false,

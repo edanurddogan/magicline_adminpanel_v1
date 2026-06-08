@@ -455,7 +455,7 @@ export default defineComponent({
   },
   async mounted() {
     this.init();
-    document.title = "Magicline - Users";
+    this.$setPageTitle("Users");
     this.$logger.log(this.$options.__name);
     /*const response = await this.$api.get('users');
     this.rows = response?.data;

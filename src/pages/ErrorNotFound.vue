@@ -43,7 +43,7 @@ export default defineComponent({
     };
   },
   created() {
-    document.title = "Magicline - 404";
+    this.$setPageTitle("404");
     this.lastPath = this.$router.options.history.state.back;
   },
   methods: {

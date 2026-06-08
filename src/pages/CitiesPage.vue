@@ -434,7 +434,7 @@ export default defineComponent({
   },
   methods: {
     init() {
-      document.title = "Magicline - cities";
+      this.$setPageTitle("cities");
       try {
         if (Platform.is.mobile) {
           this.layout.closeLeftDrawer();

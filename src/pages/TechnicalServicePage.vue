@@ -715,7 +715,7 @@ export default defineComponent({
   },
   async mounted() {
     this.init();
-    document.title = "Magicline - Technical Service";
+    this.$setPageTitle("Technical Service");
   },
   methods: {
     init() {

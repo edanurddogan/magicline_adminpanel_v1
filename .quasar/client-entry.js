@@ -46,8 +46,6 @@ import quasarUserOptions from './quasar-user-options.js'
 
 
 
-console.info('[Quasar] Running SPA.')
-
 
 const publicPath = `/`
 
@@ -162,7 +160,9 @@ createQuasarApp(createApp, quasarUserOptions)
       
       import('boot/utils'),
       
-      import('boot/logger')
+      import('boot/logger'),
+      
+      import('boot/brand-title')
       
     ]).then(bootFiles => {
       const boot = mapFn(bootFiles).filter(entry => typeof entry === 'function')

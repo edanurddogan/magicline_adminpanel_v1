@@ -654,7 +654,7 @@ export default defineComponent({
   },
   async mounted() {
     this.init();
-    document.title = "Magicline - Kasa ve Bankalar";
+    this.$setPageTitle("Kasa ve Bankalar");
     this.getList();
   },
   methods: {

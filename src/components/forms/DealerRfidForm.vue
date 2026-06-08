@@ -309,7 +309,7 @@ export default defineComponent({
   },
   methods: {
     init() {
-      document.title = `Magicline-${this.$t("rfid.rfidCardList")}`;
+      this.$setPageTitle(this.$t("rfid.rfidCardList"));
       this.getList();
     },
     onAdd() {

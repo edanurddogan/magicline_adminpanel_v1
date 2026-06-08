@@ -433,7 +433,7 @@ export default defineComponent({
   },
   methods: {
     init() {
-      document.title = "Magicline - technicalServiceTypes";
+      this.$setPageTitle("technicalServiceTypes");
       try {
         if (Platform.is.mobile) {
           this.layout.closeLeftDrawer();

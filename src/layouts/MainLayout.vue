@@ -23,7 +23,7 @@
         <!-- :src="`src/assets/logo/${firm.code}/logo.png`" -->
         <!-- src="~/assets/logo/logo.png" -->
         <q-img
-          :src="`src/assets/logo/${firm.code}/logo.png`"
+          :src="brandAssets.logo"
           spinner-color="white"
           fit="fill"
           position="left center"
@@ -1059,7 +1059,7 @@
           <!-- :src="`src/assets/logo/${firm.code}/logo2.png`" -->
           <!-- src="~/assets/logo/logo_yatay.png" -->
           <q-img
-            :src="`src/assets/logo/${firm.code}/logo2.png`"
+            :src="brandAssets.logo2"
             spinner-color="white"
             fit="contain"
           >
@@ -1121,7 +1121,7 @@
         >
           <!--src="~/assets/logo/magicline_logo.png"-->
           <q-img
-            :src="`/src/assets/logo/${firm.code}/logo2.png`"
+            :src="brandAssets.logo2"
             spinner-color="white"
             fit="scale-down"
             position="left center"
@@ -1161,6 +1161,7 @@ import { useUserStore } from "../stores/user";
 import { useMenuStore } from "src/stores/menu";
 import NotificationModule from "src/components/NotificationModule.vue";
 import LocaleSwitcher from "src/components/LocaleSwitcher.vue";
+import { brandAssets } from "src/utils/brand-assets";
 const layoutStore = useLayoutStore();
 const userStore = useUserStore();
 export default {
@@ -1197,6 +1198,7 @@ export default {
   data() {
     return {
       darkMode: false,
+      brandAssets,
       link: "Dashboard",
       rightDrawerOpen: false,
       mobile: false,

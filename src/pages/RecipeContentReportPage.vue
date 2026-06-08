@@ -349,7 +349,7 @@ export default defineComponent({
   },
   async mounted() {
     this.init();
-    document.title = `Magicline -  ${this.$t("pages.recipeReport")}`;
+    this.$setPageTitle(this.$t("pages.recipeReport"));
     // const response = await this.$api.get('getProductionReceipeList');
     // this.rows = response?.data;
     //this.$logger.log(this.rows);

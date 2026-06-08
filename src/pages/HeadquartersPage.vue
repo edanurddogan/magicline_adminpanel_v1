@@ -466,7 +466,7 @@ export default defineComponent({
     };
   },
   async mounted() {
-    document.title = "Magicline - Headquarters";
+    this.$setPageTitle("Headquarters");
     this.$logger.log("user", this.user);
     this.init();
   },

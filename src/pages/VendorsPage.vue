@@ -415,7 +415,7 @@ export default defineComponent({
   },
   methods: {
     init() {
-      document.title = "Magicline - Vendors";
+      this.$setPageTitle("Vendors");
       try {
         if (Platform.is.mobile) {
           this.layout.closeLeftDrawer();

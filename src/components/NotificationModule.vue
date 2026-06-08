@@ -78,7 +78,8 @@
 import { defineComponent } from "vue";
 import { LocalStorage } from "quasar";
 import notificationSound from "src/assets/sound/notification.mp3";
-import notificationLogo from "src/assets/logo/magicline/logo.png";
+import { firm } from "../../package.json";
+import { brandAssets } from "src/utils/brand-assets";
 
 export default defineComponent({
   computed: {},
@@ -93,8 +94,9 @@ export default defineComponent({
       unreadMessage: 0,
       messages: [],
       audio: {},
+      brandName: firm.name,
       notificationSound,
-      notificationLogo,
+      notificationLogo: brandAssets.logo,
     };
   },
   mounted() {
@@ -222,16 +224,16 @@ export default defineComponent({
     },
     async desktopNotification(message) {
       if (Notification.permission === "granted") {
-        new Notification("Magicline", {
+        new Notification(this.brandName, {
           body: message,
-          icon: notificationLogo,
+          icon: this.notificationLogo,
         });
       } else if (Notification.permission !== "denied") {
         Notification.requestPermission().then((permission) => {
           if (permission === "granted") {
-            new Notification("Magicline", {
+            new Notification(this.brandName, {
               body: message,
-              icon: notificationLogo,
+              icon: this.notificationLogo,
             });
           }
         });

@@ -1148,7 +1148,7 @@ export default defineComponent({
   async mounted() {
     /*TODO: İlk açılışta mevcut sipariş ürünleri için üretim emri var mı?
     varsa listeyi çek, yoksa önce üretim emri kaydet sonra listeyi çek*/
-    document.title = "Magicline - Üretim Planlama";
+    this.$setPageTitle("Üretim Planlama");
 
     this.$logger.log("formModel =>", this.formModel);
     this.$logger.log("orderItems =>", this.orderItems);

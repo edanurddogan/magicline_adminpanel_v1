@@ -1,4 +1,5 @@
 import { last } from "underscore";
+import { brandCopy } from "src/utils/brand-copy";
 
 export default {
   login: {
@@ -47,7 +48,7 @@ export default {
     getorder: "Place Order",
     giveorder: "Receive Order",
     technicalService: "Technical Service",
-    headquarters: "Magicline Energy",
+    headquarters: brandCopy.headquartersEn,
     vendors: "Vendors",
     persons: "Persons",
     support: "Support",
@@ -389,7 +390,7 @@ export default {
   },
 
   headquarters: {
-    headquarters: "Magicline - Company Information",
+    headquarters: brandCopy.companyInfoTitleEn,
     addlogo: "Add Logo",
     savedata: "Save Information",
     editdata: "Update Information",
@@ -409,9 +410,9 @@ export default {
   },
 
   website: {
-    website: "Magicline Web",
-    mglTR: "magiclinesarj.com (TR)",
-    mglBG: "magiclineenergy.com (BG)",
+    website: brandCopy.websiteTitle,
+    mglTR: brandCopy.primaryWebsite,
+    mglBG: brandCopy.secondaryWebsite,
     contact: "Contact",
   },
 

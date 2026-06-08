@@ -532,7 +532,7 @@ export default defineComponent({
   methods: {
     init() {
       this.getRegions();
-      document.title = "Magicline - Bölge Raporları";
+      this.$setPageTitle("Bölge Raporları");
     },
     onAdd() {
       this.maximizedToggle = false;

@@ -307,7 +307,7 @@ export default defineComponent({
   },
   methods: {
     init() {
-      document.title = `Magicline-${this.$t("region.regions")}`;
+      this.$setPageTitle(this.$t("region.regions"));
       this.getList();
     },
     onAdd() {

@@ -248,7 +248,7 @@ export default defineComponent({
   },
   methods: {
     init() {
-      document.title = `Magicline-${this.$t("pages.discountList")}`;
+      this.$setPageTitle(this.$t("pages.discountList"));
       this.getDiscountTypes();
       this.getList();
     },

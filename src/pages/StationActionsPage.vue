@@ -885,7 +885,7 @@ export default defineComponent({
     };
   },
   mounted() {
-    document.title = `Magicline-${this.$t("station.stationActions")}`;
+    this.$setPageTitle(this.$t("station.stationActions"));
     this.init();
   },
   methods: {

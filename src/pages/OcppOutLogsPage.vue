@@ -126,7 +126,7 @@ export default defineComponent({
     };
   },
   mounted() {
-    document.title = "Magicline - OCPP Out Logs";
+    this.$setPageTitle("OCPP Out Logs");
     this.init();
   },
   beforeUnmount() {

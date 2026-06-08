@@ -449,7 +449,7 @@ export default defineComponent({
   },
   methods: {
     init() {
-      document.title = "Magicline - faultCodes";
+      this.$setPageTitle("faultCodes");
       try {
         if (Platform.is.mobile) {
           this.layout.closeLeftDrawer();

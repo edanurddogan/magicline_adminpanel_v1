@@ -376,7 +376,7 @@ export default defineComponent({
   },
   methods: {
     init() {
-      document.title = "Magicline - regions";
+      this.$setPageTitle("regions");
       try {
         this.getList();
       } catch (error) {}

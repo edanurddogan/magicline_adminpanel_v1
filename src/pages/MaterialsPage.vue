@@ -454,7 +454,7 @@ export default defineComponent({
   },
   async mounted() {
     this.init();
-    document.title = "Magicline - Materials";
+    this.$setPageTitle("Materials");
     this.getList();
   },
   methods: {

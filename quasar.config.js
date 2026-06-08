@@ -10,11 +10,12 @@
 
 const { configure } = require("quasar/wrappers");
 const path = require("path");
+const { firm } = require("./package.json");
 
 module.exports = configure(function (/* ctx */) {
   return {
     htmlVariables: {
-      title: "Magicline",
+      title: firm.name,
       some: {
         prop: "my-prop",
       },
@@ -34,7 +35,14 @@ module.exports = configure(function (/* ctx */) {
     // app boot file (/src/boot)
     // --> boot files are part of "main.js"
     // https://v2.quasar.dev/quasar-cli/boot-files
-    boot: ["i18n", "axios", "addressbar-color", "utils", "logger"],
+    boot: [
+      "i18n",
+      "axios",
+      "addressbar-color",
+      "utils",
+      "logger",
+      "brand-title",
+    ],
 
     // https://v2.quasar.dev/quasar-cli-vite/quasar-config-js#css
     css: ["app.scss"],

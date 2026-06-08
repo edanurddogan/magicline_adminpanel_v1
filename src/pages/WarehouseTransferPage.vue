@@ -1713,7 +1713,7 @@ export default defineComponent({
   },
   async mounted() {
     this.init();
-    document.title = "Magicline - Products";
+    this.$setPageTitle("Products");
     this.getStockCard();
     //this.getList()
   },

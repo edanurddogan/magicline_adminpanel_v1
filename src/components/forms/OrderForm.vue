@@ -1526,7 +1526,7 @@ export default defineComponent({
     this.$logger.log("mode: ", this.formMode);
     this.orderId = this.formModel.order.id;
     this.init();
-    document.title = "Magicline - Orders";
+    this.$setPageTitle("Orders");
   },
   methods: {
     dateChange(data) {

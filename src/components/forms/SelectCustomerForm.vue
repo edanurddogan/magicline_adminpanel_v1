@@ -280,7 +280,7 @@ export default defineComponent({
   },
   async mounted() {
     this.init();
-    document.title = "Magicline - Select Customer";
+    this.$setPageTitle("Select Customer");
     this.$logger.log(this.$options.__name);
   },
   methods: {

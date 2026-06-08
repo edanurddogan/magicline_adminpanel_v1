@@ -451,7 +451,7 @@ export default defineComponent({
     };
   },
   async mounted() {
-    document.title = `Magicline-${this.$t("vehicle.vehicles")}`;
+    this.$setPageTitle(this.$t("vehicle.vehicles"));
     this.init();
   },
   methods: {

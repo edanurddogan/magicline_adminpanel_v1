@@ -337,7 +337,7 @@ export default defineComponent({
   },
   async mounted() {
     this.init();
-    document.title = "Magicline - Reçeteler";
+    this.$setPageTitle("Reçeteler");
     // const response = await this.$api.get("getProductionReceipeList");
     // this.rows = response?.data;
     // this.$logger.log(this.rows);

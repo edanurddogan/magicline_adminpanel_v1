@@ -9,7 +9,7 @@ layout.hideFooter();
   <q-page class="flex flex-center">
     <q-img
       class="bg"
-      :src="darkMode ? '/src/assets/loginbg4.jpg' : '/src/assets/loginbg1.jpg'"
+      :src="darkMode ? loginBackgrounds.dark : loginBackgrounds.light"
     ></q-img>
     <locale-switcher class="absolute absolute-top-right on-left" />
 
@@ -78,6 +78,7 @@ import { LocalStorage } from "quasar";
 import { setCssVar, Dark } from "quasar";
 import LocaleSwitcher from "src/components/LocaleSwitcher.vue";
 import { useUserStore } from "src/stores/user";
+import { loginBackgrounds } from "src/utils/brand-assets";
 const user = useUserStore();
 
 export default defineComponent({
@@ -86,7 +87,7 @@ export default defineComponent({
     LocaleSwitcher,
   },
   mounted() {
-    document.title = "Magicline - Login Vendor";
+    this.$setPageTitle("Login Vendor");
     this.darkMode = LocalStorage.has("darkMode")
       ? JSON.parse(LocalStorage.getItem("darkMode"))
       : true;
@@ -94,6 +95,7 @@ export default defineComponent({
   data() {
     return {
       email: user.savedLogin ? user.savedLogin.email : "",
+      loginBackgrounds,
       password: user.savedLogin ? user.savedLogin.password : "",
       remember: user.savedLogin ? user.savedLogin.remember : false,
       loading: false,

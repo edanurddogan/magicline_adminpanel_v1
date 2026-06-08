@@ -786,7 +786,7 @@ export default defineComponent({
   async mounted() {
     this.offerType = this.$route.params.offerType;
     this.init();
-    document.title = `Magicline - ${this.$t("pages.orders")}`;
+    this.$setPageTitle(this.$t("pages.orders"));
     this.$q.loading.hide();
     window.addEventListener("beforeprint", this.beforePrint);
     window.addEventListener("afterprint", this.afterPrint);
