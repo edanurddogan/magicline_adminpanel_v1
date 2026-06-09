@@ -12,14 +12,11 @@
     >
       <template v-slot:option="scope">
         <q-item dense v-if="!scope.opt.group" v-bind="scope.itemProps">
-          <img class="flag" :src="'/assets/flag/' + scope.opt + '.svg'" />
+          <img class="flag" :src="flagMap[scope.opt]" />
         </q-item>
       </template>
       <template v-slot:selected-item="scope">
-        <img
-          class="flag shadow-1"
-          :src="'/assets/flag/' + scope.opt + '.svg'"
-        />
+        <img class="flag shadow-1" :src="flagMap[scope.opt]" />
       </template>
     </q-select>
   </div>
@@ -27,8 +24,20 @@
 <script>
 import { defineComponent } from "vue";
 import { LocalStorage } from "quasar";
+import deFlag from "src/assets/flag/de.svg";
+import enFlag from "src/assets/flag/en.svg";
+import trFlag from "src/assets/flag/tr.svg";
 
 export default defineComponent({
+  data() {
+    return {
+      flagMap: {
+        de: deFlag,
+        en: enFlag,
+        tr: trFlag,
+      },
+    };
+  },
   computed: {
     locale: {
       get() {

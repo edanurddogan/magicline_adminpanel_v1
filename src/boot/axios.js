@@ -13,12 +13,12 @@ import { i18n } from "boot/i18n";
 // for each client)
 
 const api = axios.create({
-  //baseURL: "http://localhost:8081/api/",
+baseURL: "http://localhost:8081/api/",
   //baseURL: "http://baseapi_bg.magiclineenergy.com/api/",
   //baseURL: "http://api.infaura.com:8081/api/",
   //baseURL: "https://base-uat.energysarj.com.tr/api/",  // Can Enerji UAT
   //baseURL: "https://bo-uat-api.e4sarj.com.tr/api/", // E4 UAT
-  baseURL: "https://api.magiclineapp.com/api/", // Magicline Prod
+//baseURL: "https://api.magiclineapp.com/api/", // Magicline Prod
 });
 
 export default boot(({ app }) => {

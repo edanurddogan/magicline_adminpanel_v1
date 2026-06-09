@@ -13,8 +13,8 @@ const brandCopyMap = {
   e4sarj: {
     headquartersTr: "E4sarj",
     headquartersEn: "E4sarj",
-    websiteTitle: "E4sarj Web",
-    primaryWebsite: "e4sarj.com.tr",
+    websiteTitle: "",
+    primaryWebsite: "",
     secondaryWebsite: "",
   },
   canenerji: {
